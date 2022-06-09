@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from "react";
 
-import { setEpisode } from '@slices/episode';
-import { useDispatch, useSelector } from '@store/store';
+import { setEpisode } from "@slices/episode";
+import { useDispatch, useSelector } from "@store/store";
 
 export interface PageButtonProps {
   start: number;
@@ -35,6 +35,13 @@ const Episode: React.FC = () => {
 
   const episodeArray = Array.from({ length: episodes }, (_, i) => i + 1);
 
+  const clickHandler = (v) => {
+    const id = document.getElementById(v.toString());
+    id.style.backgroundColor = "red";
+    console.log(id);
+    dispatch(setEpisode(v));
+  };
+
   return (
     <div>
       <div className="m-2 flex">
@@ -44,10 +51,10 @@ const Episode: React.FC = () => {
           className="ml-2 w-32 rounded-sm p-1 text-sm text-gray-800 placeholder-gray-700 outline-none md:text-base"
           placeholder="Episode no."
           onKeyDown={(e) => {
-            if (e.key !== 'Enter') return;
+            if (e.key !== "Enter") return;
 
             dispatch(setEpisode(parseInt(inputRef.current.value, 10)));
-            inputRef.current.value = '';
+            inputRef.current.value = "";
           }}
         ></input>
       </div>
@@ -73,9 +80,10 @@ const Episode: React.FC = () => {
               .slice((currentPage - 1) * 100, currentPage * 100)
               .map((v) => (
                 <div
-                  className="rounded-sm bg-gray-100 py-[1px] px-1 text-gray-800 hover:bg-gray-400"
+                  className="cursor-pointer rounded-sm bg-gray-100 py-[1px] px-1 text-gray-800 hover:bg-red-600 active:bg-red-600"
+                  id={v.toString()}
                   key={v}
-                  onClick={() => dispatch(setEpisode(v))}
+                  onClick={() => clickHandler(v)}
                 >
                   {v}
                 </div>

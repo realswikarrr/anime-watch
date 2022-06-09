@@ -19,7 +19,7 @@ const Section: React.FC<SectionProps> = ({ title, animeList }) => {
 
       <div
         tabIndex={0}
-        className="mt-2 mb-8 ml-2 flex space-x-4 overflow-y-hidden overflow-x-scroll p-1 outline-none scrollbar-hide sm:ml-6"
+        className="mt-2 mb-8 ml-2 flex space-x-5 overflow-y-hidden overflow-x-scroll p-1 outline-none scrollbar-hide sm:ml-6"
         ref={animeListRef}
         onMouseEnter={() => animeListRef.current.focus()}
       >

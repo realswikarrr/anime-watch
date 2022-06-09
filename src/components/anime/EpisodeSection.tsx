@@ -1,8 +1,8 @@
-import React, { useRef } from 'react';
+import React, { useRef } from "react";
 
-import EpisodeCard from '@components/anime/Episode';
-import { AnimeBannerFragment } from '@generated/aniList';
-import { EpisodesListFragment } from '@generated/kitsu';
+import EpisodeCard from "@components/anime/Episode";
+import { AnimeBannerFragment } from "@generated/aniList";
+import { EpisodesListFragment } from "@generated/kitsu";
 
 export interface SectionProps {
   anime: AnimeBannerFragment;

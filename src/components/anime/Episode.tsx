@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
-import { AnimeBannerFragment, AnimeInfoFragment } from '@generated/aniList';
-import { EpisodeInfoFragment } from '@generated/kitsu';
+import { AnimeBannerFragment, AnimeInfoFragment } from "@generated/aniList";
+import { EpisodeInfoFragment } from "@generated/kitsu";
 
 export interface CardProps {
   anime: AnimeBannerFragment & AnimeInfoFragment;

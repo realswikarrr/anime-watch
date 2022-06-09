@@ -1,12 +1,12 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
-import { ClockIcon, ThumbUpIcon } from '@heroicons/react/outline';
-import { PlayIcon } from '@heroicons/react/solid';
+import { ClockIcon, ThumbUpIcon } from "@heroicons/react/outline";
+import { PlayIcon } from "@heroicons/react/solid";
 
-import Icon from '@components/Icon';
-import { AnimeInfoFragment } from '@generated/aniList';
-import { base64SolidImage } from '@utility/image';
+import Icon from "@components/Icon";
+import { AnimeInfoFragment } from "@generated/aniList";
+import { base64SolidImage } from "@utility/image";
 
 export interface CardProps {
   anime: AnimeInfoFragment;
